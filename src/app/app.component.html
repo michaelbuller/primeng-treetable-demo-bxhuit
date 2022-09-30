@@ -1,0 +1,18 @@
+<h5>Financials</h5>
+<p-treeTable [value]="files1">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Account</th>
+      <th>Total</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+    <tr [ttRow]="rowNode">
+      <td>
+        <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+        {{ rowData.name }}
+      </td>
+      <td>{{ rowData.size }}</td>
+    </tr>
+  </ng-template>
+</p-treeTable>
